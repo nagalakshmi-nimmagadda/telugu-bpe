@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+.env
+
+# IDEs and editors
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Logs and databases
+*.log
+*.sqlite
+
+# Project specific
+telugu-bpe-demo/
+.ipynb_checkpoints/
+
+# Large files (if needed)
+# models/*.json
+```
+
+3. Create proper .gitattributes file (don't use echo):

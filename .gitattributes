@@ -1,0 +1,10 @@
+# Source files
+*.py text diff=python
+*.md text diff=markdown
+
+# Configs
+*.json text
+*.yml text
+
+# Make sure line endings are normalized
+* text=auto

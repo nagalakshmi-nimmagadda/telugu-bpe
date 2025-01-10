@@ -1,0 +1,21 @@
+name: Sync to Hugging Face Hub
+on:
+  push:
+    branches: [main]
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          lfs: true
+      - name: Push to HF Space
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+          git remote add space https://ninagala:$HF_TOKEN@huggingface.co/spaces/ninagala/telugu-bpe-demo
+          git push space main --force 
